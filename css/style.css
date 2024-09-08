@@ -1,0 +1,238 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    /* background-image: url('../images/bg.jpg'); */
+}
+.nav{
+    margin-top: 2%;
+    display: inline;
+    justify-content: center;
+    align-content: center;
+    min-height: max-content;
+    background-color:rgba(0, 0, 0, 0);
+}
+.content{
+    background: rgba(95, 158, 160, 0);
+
+}
+
+.container-fluid{
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.424);
+    border-color: #1c1c1c82;
+    border-style: solid;
+    /* position: fixed; */
+}
+.container{
+    color: white;
+    background-color: #1c1c1c00;
+}
+
+.navbar-brand{
+    margin-top: 2%;
+    /* margin-left: 15%; */
+    color: white;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+.navbar-nav {
+    margin-top: 2%;
+    margin-left: 40%;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+.nav-link.btn {
+    padding: 10px 20px; /* Optional: Adjust button padding */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+.btn{
+    background-color: white;
+    color: black;
+    box-shadow: blue;
+}
+
+
+#hero {
+    height: 100vh;
+    /* background: url('../images/bg.jpg') no-repeat center center; */
+    background-size: cover; /* Ensures the background covers the entire section */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+a{
+    text-decoration: none;
+}
+.card-title{
+    text-decoration: underline;
+}
+.link{
+    text-decoration: underline;
+    color: blue;
+}
+.link:hover{
+    text-decoration: underline;
+    color: navy;
+}
+.profile-image {
+    width: 300px; /* Adjust the size of the image */
+    height: 300px; /* Set equal height and width for square */
+    object-fit: cover; /* Ensure the image scales properly inside the square */
+    border-radius: 0; /* Remove the circular shape */
+    border: 5px solid #ccc; /* Optional: Add a border for a square box effect */
+}
+.projects-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+}
+
+.row.flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent cards from wrapping to the next row */
+    gap: 20px; /* Space between the cards */
+}
+
+.col-md-6, .col-lg-4 {
+    flex: 0 0 auto; /* Ensure cards are fixed size, preventing them from shrinking or growing */
+    max-width: 23%; /* Set a minimum width for each card */
+}
+
+
+/* Optional scrollbar customization */
+.projects-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-wrapper:-webkit-scrollbar-thumb {
+    background-color: #88888800;
+    border-radius: 10px;
+}
+
+.projects-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #55555500;
+}
+
+
+/* Theme-specific colors */
+:root {
+    --about-bg-color: lightskyblue;
+    --about-text-color: rgb(23, 23, 86);
+    --light-bg-color: #f4f4f4;
+    --light-text-color: #333;
+    --dark-bg-color: #1c1c1c;
+    --dark-text-color: #f4f4f4;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+}
+
+body.light-mode .navbar {
+    background-color: #fff;
+    color: var(--light-text-color);
+}
+
+body.light-mode .content {
+    background: url('../images/animbg4.gif') no-repeat;
+    background-size: cover;
+}
+
+body.light-mode .card {
+    background-color: #fff;
+    color: var(--light-text-color);
+    height: fit-content;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    
+}
+body.light-mode .card:hover{
+    border: 2px solid lightskyblue;
+}
+
+body.light-mode .about>.container{
+    color: rgb(23, 23, 86);
+    
+}
+body.light-mode .projects>.container{
+    color: rgb(23, 23, 86);
+    border: solid navy;
+    padding: 2%;
+    border-radius: 2%;
+    background-color: rgb(226, 248, 255);
+}
+body.light-mode .about{
+    background-color: lightskyblue;
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+    color: var(--dark-text-color);
+}
+/* body.dark-mode section{
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+    padding: 0px;
+    margin: 0px;
+} */
+body.dark-mode .content {
+    background: url('../images/animbg4.gif') no-repeat;
+    background-size: cover;
+}
+
+body.dark-mode .projects>.container{
+    color: var(--dark-text-color);
+    border: solid var(--dark-text-color);
+    border-radius: 2%;
+    background-color: var(--dark-bg-color);
+    /* margin-top: 2%; */
+    padding: 2%;
+}
+body.dark-mode .projects{
+    color: var(--dark-text-color);
+    background-color: var(--dark-bg-color);
+}
+body.dark-mode .text-center{
+    color: var(--dark-text-color);
+}
+/* body.dark-mode .card {
+    background-color: #333;
+    color: var(--dark-text-color);
+} */
+body.dark-mode .about>.container{
+    color:cyan;
+    /* margin: 0px; */
+    
+}
+
+body.dark-mode .projects>.container{
+    color: rgb(23, 23, 86);
+    
+}
+body.dark-mode .card {
+    background-color: var(--light-bg-color); /* Dark background for the card */
+    color: var(--light-text-color);
+    height: fit-content;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 4px 16px rgba(255, 255, 255, 0.1); /* Softer shadow with a hint of light */
+}
+
+/* body.dark-mode .about{
+    background-color: lightskyblue;
+} */
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
